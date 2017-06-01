@@ -3,38 +3,38 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# business: http://ogp.me/ns/business#">
     <meta charset="utf-8" />
 
-    <title>andco</title>
-    <meta name="description" content="Studio andco is a Swiss design agency. We create branding, visual designs, and websites.">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta property="fb:app_id" content="1647511595550108" />
     <meta property="og:type" content="business.business" />
-    <meta property="og:site_name" content="Studio andco"/>
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="{{ site.title }}"/>
+    <meta property="og:locale" content="fr_CH" />
 
-    <meta property="business:contact_data:street_address" content="Rue de l'Industrie 40" />
-    <meta property="business:contact_data:locality" content="Sion" />
-    <meta property="business:contact_data:postal_code" content="1950" />
-    <meta property="business:contact_data:country_name" content="Suisse" />
-    <meta property="place:location:latitude" content="46.227210" />
-    <meta property="place:location:longitude" content="7.365095" />
+    <meta property="business:contact_data:street_address" content="{{ site.street }}" />
+    <meta property="business:contact_data:locality" content="{{ site.city }}" />
+    <meta property="business:contact_data:postal_code" content="{{ site.zip }}" />
+    <meta property="business:contact_data:country_name" content="{{ site.country }}" />
+    <meta property="place:location:latitude" content="{{ site.latitude }}" />
+    <meta property="place:location:longitude" content="{{ site.longitude }}" />
 
-    <meta property="og:title" content="Studio andco - Swiss design agency" />
-    <meta property="og:image" content="http://andco.ch/files/cards/andco.png" />
-    <meta property="og:url" content="http://andco.ch/" />
-    <meta property="og:description" content="Studio andco is a Swiss design agency. We create branding, visual designs, and websites." />
+    <meta property="og:title" content="{{ site.title }} - Swiss design agency" />
+    <meta property="og:image" content="{{ site.url }}/files/cards/andco.png" />
+    <meta property="og:url" content="{{ site.url }}/{{ page.url }}" />
+    <meta property="og:description" content="{{ site.description }}" />
 
     <meta property="twitter:card" content="summary" />
-    <meta property="twitter:site" content="@ANDco_o" />
+    <meta property="twitter:site" content="@{{ site.twitter_username }}" />
     <meta property="twitter:creator" content="@meierg" />
 
     <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="/styles/main.css" rel="stylesheet">
-    <link href="/styles/print.css" rel="stylesheet" media="print">
+    <link href="{{ site.url }}/styles/main.css" rel="stylesheet">
+    <link href="{{ site.url }}/styles/print.css" rel="stylesheet" media="print">
 
-    <link rel="canonical" href="http://andco.ch/">
+    <link rel="canonical" href="{{ site.url }}/{{ page.url }}">
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png" />
@@ -72,18 +72,18 @@
     <nav>
         <ul class="social">
             <li>
-                <a class="facebook" href="https://www.facebook.com/andcohello">
-                    <img src="/files/pictogram/facebook.png"><span>Facebook</span>
+                <a class="facebook" href="https://www.facebook.com/{{ site.facebook_username }}">
+                    <img src="{{ site.url }}/files/pictogram/facebook.png"><span>Facebook</span>
                 </a>
             </li>
             <li>
-                <a class="instagram" href="https://www.instagram.com/andco_o">
-                    <img src="/files/pictogram/instagram.png"><span>Instagram</span>
+                <a class="instagram" href="https://www.instagram.com/{{ site.instagram_username }}">
+                    <img src="{{ site.url }}/files/pictogram/instagram.png"><span>Instagram</span>
                 </a>
             </li>
             <li>
                 <a class="maps" href="https://www.google.ch/maps/place/ANDco/@46.2272173,7.3632894,17z/data=!3m1!4b1!4m5!3m4!1s0x478edc26a314c67d:0xfe3d7c62bd23336a!8m2!3d46.2272173!4d7.3654781?hl=en">
-                    <img src="/files/pictogram/maps.png"><span>Maps</span>
+                    <img src="{{ site.url }}/files/pictogram/maps.png"><span>Maps</span>
                 </a>
             </li>
         </ul>
@@ -93,18 +93,18 @@
 
     <footer>
         <address>
-            andco<br>
-            Rue de l'Industrie 40<br>
-            1950 Sion<br>
-            Valais - Suisse<br>
-            <a href="mailto:hello@andco.ch">hello@andco.ch</a>
+            {{ site.title }}<br>
+            {{ site.street }}<br>
+            {{ site.zip }} {{ site.city }}<br>
+            {{ site.state }} - {{ site.country }}<br>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
         </address>
     </footer>
 
     <script src="/javascripts/main.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-77883422-1', 'auto');
+        ga('create', '{{ site.ga }}', 'auto');
         ga('send', 'pageview');
     </script>
 </body>
