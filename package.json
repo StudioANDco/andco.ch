@@ -1,0 +1,11 @@
+{
+  "name": "andco",
+  "version": "1.0.0",
+  "main": "README.md",
+  "author": "Liip AG",
+  "license": "private",
+  "private": true,
+  "devDependencies": {
+    "kanbasu": "^1.4.0"
+  }
+}

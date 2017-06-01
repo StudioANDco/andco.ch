@@ -1,0 +1,25 @@
+---
+---
+html {
+    background: none;
+}
+
+body > div.grid {
+    margin: 90px auto 0 !important;
+    width: 100%;
+}
+
+.grid__item {
+    width: 50% !important;
+}
+
+.grid__item article img {
+    margin: 0 auto;
+}
+
+.card {
+    &:after, &:before { display: none; }
+
+    box-shadow: none;
+    border: 1px solid black;
+}
