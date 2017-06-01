@@ -1,0 +1,82 @@
+.card {
+    position: relative;
+    margin: 100px 20px 0;
+    background: white;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 3px 5px 5px rgba(0,0,0,0.24);
+
+    &:before, &:after {
+        position: absolute;
+        top: -78px;
+        right: 0;
+        content: ' ';
+        display: block;
+        width: 115px;
+        height: 95px;
+        background: url('/files/pince.png') no-repeat center center;
+        background-size: 100%;
+    }
+
+    &:before {
+        left: calc(50% - 57px);
+    }
+
+    &:after {
+        display: none;
+    }
+}
+
+@media (min-width: $screen-xs-max) {
+    .card--double {
+        &:before {
+            left: calc(25% - 67px);
+        }
+
+        &:after {
+            left: calc(75% - 47px);
+            display: block;
+        }
+    }
+}
+
+.card__media {
+    width: 100%;
+}
+
+.card--padded {
+    padding: 20px;
+}
+
+.card--business {
+    position: relative;
+    height: 280px;
+    margin-bottom: 20px;
+
+    h1, address > span, .url { display: none; }
+
+    img, h2, h3, a {
+        line-height: 1;
+        font-size: 16px;
+        color: black;
+        text-shadow: 0 0 2px rgba(100, 100, 100, 0.3);
+        text-decoration: none;
+        font-style: normal;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+    }
+
+    h2, h3 { text-transform: uppercase; }
+
+    img {
+        left: 20px;
+        top: 90px;
+        width: 60px;
+    }
+
+    h2, h3, a { left: 100px; }
+    h2 { top: 110px; }
+    h3 { top: 130px; }
+    .email { top: 165px; }
+    .phone { top: 200px; }
+}

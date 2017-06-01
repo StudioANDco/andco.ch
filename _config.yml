@@ -1,0 +1,46 @@
+title: Studio ANDco
+subtitle: Agence de communication print et digitale
+author: Studio ANDco
+email: hello@andco.ch
+description: >
+    Le Studio ANDco est une agence de communication print et digitale
+    qui réponds à toutes formes de demandes. Nous sommes en mesure de
+    résoudre les équations les plus complexes. Nous vous aiguillerons
+    concernant vos besoins. Nous vous permettrons d'établir des parallèles.
+    Nous vous éviterons de tourner en rond. Nous arrondirons les angles
+    en cas de besoin.
+
+    Soyez également sûr que nous y mettrons la forme. Bref, avec nous,
+    vous tenez une formule gagnante !
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://andco.ch" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ANDco_o
+github_username:  StudioANDco
+
+exclude:
+
+# Build settings
+markdown: kramdown
+gems:
+    - jekyll-feed
+    - jekyll-coffeescript
+    - jekyll-paginate
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - node_modules
+    - package.json
+
+# Github forced settings
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+    noscript: false
+
+kramdown:
+    input: GFM
+    hard_wrap: false
+
+
