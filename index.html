@@ -37,37 +37,21 @@ layout: base
         </article>
     </div>
 
+    {% assign projects = site.projects | where:'homepage_push', true %}
+    {% for project in projects %}
+        {% include projects_tn.html project=project lg=2 sm=1 %}
+    {% endfor %}
+
+    {% assign projects = site.projects | where_exp:'item', "item.homepage_order > 0" | sort: 'homepage_order' %}
     <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
-        <article class="card">
-            <img class="card__media" src="/files/projects/cabine.png" title="La Cabine" alt="La Cabine">
-        </article>
+        {% for project in projects  limit: 4 %}
+            {% include projects_tn.html project=project lg=2 sm=2 %}
+        {% endfor %}
     </div>
 
-    <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
-        <div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
-            <article class="card">
-                <img class="card__media" src="/files/projects/assainimmob.png" title="Assainimmob" alt="Assainimmob">
-            </article>
-        </div>
-
-        <div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
-            <article class="card">
-                <img class="card__media" src="/files/projects/bebroker.png" title="Be Broker" alt="Be Broker">
-            </article>
-        </div>
-
-        <div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
-            <article class="card">
-                <img class="card__media" src="/files/projects/photoval.png" title="PhotoVal" alt="PhotoVal">
-            </article>
-        </div>
-
-        <div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
-            <article class="card">
-                <img class="card__media" src="/files/projects/taara.png" title="Taara Architecture" alt="Taara Architecture">
-            </article>
-        </div>
-    </div>
+    {% for project in projects offset: 4 %}
+        {% include projects_tn.html project=project lg=4 sm=2 %}
+    {% endfor %}
 
     {% for poster in site.cards %}
         {% capture extra %}{% if forloop.last %}alone-last{% endif %}{% endcapture %}
