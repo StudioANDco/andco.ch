@@ -3,89 +3,24 @@ layout: base
 ---
 <div class="grid">
     <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
-        <article class="card">
+        <article class="card" style="margin-bottom: 20px;">
             <address class="hidden">
-                <span class="name">Studio andco</span>
-                <span class="street">Rue de l'Industrie 40</span>
-                <span class="city">1950 Sion</span>
-                <span class="country">Valais - Suisse</span>
+                <span class="name">{{ site.title }}</span>
+                <span class="street">{{ site.street }}</span>
+                <span class="city">{{ site.zip }} {{ site.city }}</span>
+                <span class="country">{{ site.state }} - {{ site.country }}</span>
 
-                <a class="url"  href="http://andco.ch">andco.ch</a>
-                <a class="email" href="mailto:hello@andco.ch">hello@andco.ch</a>
+                <a class="url" href="{{ site.url }}">andco.ch</a>
+                <a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a>
             </address>
 
-            <img class="card__media" src="/files/cards/andco.png" alt="andco business card back">
+            <img class="card__media" src="/files/cards/andco.png" alt="Studio ANDco Sàrl business card" title="Studio ANDco Sàrl business card">
         </article>
     </div>
 
-    <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
-        <article class="card card--padded card--business">
-            <header>
-                <img src="/files/pictogram/triangle.png" title="Stéphane Geiser Business Card" alt="Stéphane Geiser Business Card">
-                <h1>Stéphane Geiser</h1>
-                <h2>Mr. Triangle</h2>
-                <h3>Poly Innovator</h3>
-            </header>
-
-            <address>
-                <span class="name">Stéphane Geiser</span>
-                <span class="title">Graphic designer</span>
-                <span class="street">Rue de l'Industrie 40</span>
-                <span class="city">1950 Sion</span>
-                <span class="country">Valais - Suisse</span>
-
-                <a class="url"  href="http://andco.ch#triangle">andco.ch</a>
-                <a class="email" href="mailto:triangle@andco.ch">triangle@andco.ch</a>
-                <a class="phone" href="tel:0041788496223">+41 078 849 62 23</a>
-            </address>
-        </article>
-    </div>
-
-    <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
-        <article class="card card--padded card--business">
-            <header>
-                <img src="/files/pictogram/square.png" title="Paloma Garcia Magliocco Business Card" alt="Paloma Garcia Magliocco Business Card">
-                <h1>Paloma Garcia Magliocco</h1>
-                <h2>Ms. Square</h2>
-                <h3>Angular Founder</h3>
-            </header>
-
-            <address>
-                <span class="name">Paloma Garcia Magliocco</span>
-                <span class="title">Graphic designer</span>
-                <span class="street">Rue de l'Industrie 40</span>
-                <span class="city">1950 Sion</span>
-                <span class="country">Valais - Suisse</span>
-
-                <a class="url"  href="http://andco.ch#triangle">andco.ch</a>
-                <a class="email" href="mailto:square@andco.ch">square@andco.ch</a>
-                <a class="phone" href="tel:0041786061871">+41 078 606 18 71</a>
-            </address>
-        </article>
-    </div>
-
-    <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
-        <article class="card card--padded card--business">
-            <header>
-                <img src="/files/pictogram/circle.png" title="Gilles Crettenand Business Card" alt="Gilles Crettenand Business Card">
-                <h1>Gilles Crettenand</h1>
-                <h2>Mr. Circle</h2>
-                <h3>Wavy Master</h3>
-            </header>
-
-            <address>
-                <span class="name">Gilles Crettenand</span>
-                <span class="title">Web developer</span>
-                <span class="street">Rue de l'Industrie 40</span>
-                <span class="city">1950 Sion</span>
-                <span class="country">Valais - Suisse</span>
-
-                <a class="url"  href="http://andco.ch#triangle">andco.ch</a>
-                <a class="email" href="mailto:circle@andco.ch">circle@andco.ch</a>
-                <a class="phone" href="tel:0041795066571">+41 079 506 65 71</a>
-            </address>
-        </article>
-    </div>
+    {% for card in site.cards %}
+        {% include cards.html card=card %}
+    {% endfor %}
 
     <div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/1">
         <article class="card card--padded" style="font-size: 1.4em;">
@@ -134,21 +69,8 @@ layout: base
         </div>
     </div>
 
-    <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
-        <article class="card card--double">
-            <img class="card__media" src="/files/poster/triangle.png.jpg" title="Poster Stéphane Geiser" alt="Triangle - Poly Innovator">
-        </article>
-    </div>
-
-    <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
-        <article class="card card--double">
-            <img class="card__media" src="/files/poster/square.png.jpg" title="Poster Paloma Garcia Magliocco" alt="Square - Angular Founder">
-        </article>
-    </div>
-
-    <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1 lg-alone-last">
-        <article class="card card--double">
-            <img class="card__media" src="/files/poster/circle.png.jpg" title="Poster Gilles Crettenant" alt="Circle - Wavy Master">
-        </article>
-    </div>
+    {% for poster in site.cards %}
+        {% capture extra %}{% if forloop.last %}alone-last{% endif %}{% endcapture %}
+        {% include posters.html poster=poster extra_class=extra %}
+    {% endfor %}
 </div>

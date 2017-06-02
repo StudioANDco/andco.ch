@@ -55,4 +55,24 @@ kramdown:
     input: GFM
     hard_wrap: false
 
+# Collections
 
+collections:
+    cards:
+        output: true
+        permalink: /team/:title
+    projects:
+        output: true
+        permalink: /projects/:title
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: cards
+    values:
+      layout: team
