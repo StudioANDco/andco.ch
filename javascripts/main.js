@@ -13,7 +13,7 @@ function align() {
     const full_columns = Math.floor(ratio);
     const delta = ratio - full_columns > 0.5 ? 20 : -20;
 
-    let margin = full_columns * grid_size + delta;
+    var margin = full_columns * grid_size + delta;
 
     if(margin + grid_width > full_width) {
         margin = 20;
@@ -23,7 +23,7 @@ function align() {
 }
 
 function fix_height() {
-    [...document.getElementsByClassName('card')].forEach(function(el) {
+    document.querySelectorAll('.card').forEach(function(el) {
         const style = window.getComputedStyle(el);
 
         const top = +style.marginTop.replace('px', '');
@@ -42,7 +42,7 @@ align();
 setTimeout(fix_height, 550);
 
 
-let timeout = false;
+var timeout = false;
 window.addEventListener('resize', function() {
     clearTimeout(timeout);
     timeout = setTimeout(align, 250);
