@@ -31,10 +31,11 @@ exclude:
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
     - jekyll-feed
     - jekyll-coffeescript
     - jekyll-paginate
+    - jekyll-sitemap
 exclude:
     - Gemfile
     - Gemfile.lock
@@ -74,3 +75,16 @@ defaults:
       type: cards
     values:
       layout: team
+
+# Sitemap
+
+sitemap:
+    filename: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/index.html"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
