@@ -12,6 +12,6 @@
   "name": "{{ include.poster.name }}",
   "author": { "@id": "{{ site.url}}" },
   "image": "{{ site.url}}/files/poster/{{ include.poster.sign }}.png.jpg",
-  "url": "{{ site.url}}/team/{{ include.poster.sign | slugify }}.html"
+  "url": "{{ site.url}}/team/{{ include.poster.slug }}"
 }
 </script>
