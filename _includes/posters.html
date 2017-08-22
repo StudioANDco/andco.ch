@@ -3,3 +3,15 @@
         <img class="card__media" src="/files/poster/{{ include.poster.sign }}.png.jpg" title="Poster {{ include.poster.name }}" alt="{{ include.poster.sign_long }} - {{ include.poster.role }}">
     </article>
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "@id": "{{ site.url}}/files/poster/{{ include.poster.sign }}.png.jpg",
+  "name": "{{ include.poster.name }}",
+  "author": "Studio ANDco Sàrl",
+  "image": "{{ site.url}}/files/poster/{{ include.poster.sign }}.png.jpg",
+  "url": "{{ site.url}}/team/{{ include.poster.sign | slugify }}.html"
+}
+</script>

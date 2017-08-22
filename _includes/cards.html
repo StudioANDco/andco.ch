@@ -34,7 +34,7 @@
     "{{ site.url }}/files/poster/{{ include.card.sign }}.png.jpg"
   ],
 
-  "url": "{{ site.url }}#{{ include.card.sign }}",
+  "url": "{{ site.url}}/team/{{ include.card.sign | slugify }}.html",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "{{ site.street }}",
