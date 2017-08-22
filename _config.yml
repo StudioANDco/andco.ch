@@ -5,13 +5,10 @@ email: hello@andco.ch
 description: >
     Le Studio ANDco est une agence de communication print et digitale
     qui réponds à toutes formes de demandes. Nous sommes en mesure de
-    résoudre les équations les plus complexes. Nous vous aiguillerons
-    concernant vos besoins. Nous vous permettrons d'établir des parallèles.
-    Nous vous éviterons de tourner en rond. Nous arrondirons les angles
-    en cas de besoin.
-
-    Soyez également sûr que nous y mettrons la forme. Bref, avec nous,
-    vous tenez une formule gagnante !
+    créer l'entiereté de votre identitée visuelle : carte de visite,
+    papier à entête, site internet, flyer, affiche.
+    Nous sommes basés à Sion en Valais.
+    Graphisme - Communication Visuelle - Webdesign.
 street: "Rue de l'industrie 40"
 city: "Sion"
 zip: "1950"
@@ -28,6 +25,7 @@ twitter_username: ANDco_o
 github_username:  StudioANDco
 facebook_username: andcohello
 instagram_username: andco_o
+linkedin_username: studioandco
 
 exclude:
 

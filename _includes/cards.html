@@ -20,3 +20,30 @@
         </address>
     </article>
 </div>
+
+<script type='application/ld+json'>
+{
+  "@context": "http://www.schema.org",
+  "@type": "Person",
+  "@id": "{{ site.url }}#{{ include.card.sign }}",
+  "name": "{{ include.card.name }}",
+  "alternateName": "{{ include.card.sign_long }}",
+  "jobTitle": "{{ include.card.role }}",
+  "image": [
+    "{{ site.url }}/files/pictogram/{{ include.card.sign }}.png",
+    "{{ site.url }}/files/poster/{{ include.card.sign }}.png.jpg"
+  ],
+
+  "url": "{{ site.url }}#{{ include.card.sign }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.street }}",
+    "addressLocality": "{{ site.city }}",
+    "addressRegion": "{{ site.state }}",
+    "postalCode": "{{ site.zip }}",
+    "addressCountry": "{{ site.country }}"
+  },
+  "email": "{{ include.card.email }}",
+  "telephone": "{{ include.card.phone_unformatted }}"
+}
+ </script>
