@@ -10,7 +10,7 @@
   "@type": "CreativeWork",
   "@id": "{{ site.url}}/files/poster/{{ include.poster.sign }}.png.jpg",
   "name": "{{ include.poster.name }}",
-  "author": "Studio ANDco Sàrl",
+  "author": { "@id": "{{ site.url}}" },
   "image": "{{ site.url}}/files/poster/{{ include.poster.sign }}.png.jpg",
   "url": "{{ site.url}}/team/{{ include.poster.sign | slugify }}.html"
 }

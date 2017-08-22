@@ -10,8 +10,8 @@
   "@type": "CreativeWork",
   "@id": "{{ site.url}}/projects/{{ include.project.title | slugify }}.html",
   "name": "{{ include.project.title }}",
-  "author": "Studio ANDco Sàrl",
-  "image": "{{ site.url}}/files/projects/{{ include.project.code }}.png"
+  "author": { "@id": "{{ site.url}}" },
+  "image": "{{ site.url}}/files/projects/{{ include.project.code }}.png",
   "url": "{{ site.url}}/projects/{{ include.project.title | slugify }}.html"
 }
 </script>
