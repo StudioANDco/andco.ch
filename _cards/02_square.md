@@ -9,3 +9,5 @@ phone: +41 078 606 18 71
 phone_unformatted: 0041786061871
 slug: square.html
 ---
+
+Description de Paloma
