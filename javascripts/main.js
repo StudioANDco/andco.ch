@@ -52,7 +52,7 @@ window.addEventListener('resize', function() {
 var cards = document.getElementsByClassName('card--business');
 Array.prototype.forEach.call(cards, function(card) {
     card.addEventListener('click', function() {
-        var link = card.getElementsByTagName('a')[0];
+        var link = card.getElementsByClassName('card--link')[0];
         link.click();
     });
 });
