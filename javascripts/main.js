@@ -37,13 +37,15 @@ function fix_height() {
     });
 }
 
-align();
+document.addEventListener("DOMContentLoaded", function() {
+    align();
 
-setTimeout(fix_height, 550);
+    fix_height();
+    setTimeout(fix_height, 550);
 
-
-var timeout = false;
-window.addEventListener('resize', function() {
-    clearTimeout(timeout);
-    timeout = setTimeout(align, 250);
+    var timeout = false;
+    window.addEventListener('resize', function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(align, 250);
+    });
 });
