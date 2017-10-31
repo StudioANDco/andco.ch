@@ -3,5 +3,12 @@ layout: base
 ---
 <div class="grid">
     {% include cards.html card=page extra_class='alone-last' %}
+
+    <div class="grid__item lg-w-1\2 w-1\1">
+        <div class="card card--padded">
+            {{ content }}
+        </div>
+    </div>
+
     {% include posters.html poster=page lg=1 sm=1 %}
 </div>

@@ -2,9 +2,9 @@
     <article class="card card--padded card--business">
         <header>
             <img src="{{ site.url }}/files/pictogram/{{ include.card.sign }}.png" title="{{ include.card.name }} Business Card" alt="{{ include.card.name }} Business Card">
-            <h1>{{ include.card.name }}</h1>
-            <h2>{{ include.card.sign_long }}</h2>
-            <h3>{{ include.card.title }}</h3>
+            <h1><a href="{{ site.url }}/team/{{ include.card.slug }}">{{ include.card.name }}</a></h1>
+            <h2><a href="{{ site.url }}/team/{{ include.card.slug }}">{{ include.card.sign_long }}</a></h2>
+            <h3><a href="{{ site.url }}/team/{{ include.card.slug }}">{{ include.card.title }}</a></h3>
         </header>
 
         <address>

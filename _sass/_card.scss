@@ -51,19 +51,23 @@
     position: relative;
     height: 280px;
     margin-bottom: 20px;
+    cursor: pointer;
 
     h1, address > span, .url { display: none; }
 
-    img, h2, h3, a {
+    img, h2, h3, address a {
         line-height: 1;
         font-size: 16px;
-        color: black;
         text-shadow: 0 0 2px rgba(100, 100, 100, 0.3);
-        text-decoration: none;
-        font-style: normal;
         position: absolute;
         padding: 0;
         margin: 0;
+
+        &, a {
+            text-decoration: none;
+            color: black;
+            font-style: normal;
+        }
     }
 
     h2, h3 { text-transform: uppercase; }
@@ -74,7 +78,7 @@
         width: 60px;
     }
 
-    h2, h3, a { left: 100px; }
+    h2, h3, address a { left: 100px; }
     h2 { top: 110px; }
     h3 { top: 130px; }
     .email { top: 165px; }
