@@ -67,20 +67,26 @@ body > footer {
     display: none;
 }
 
+@media (min-width: $screen-sm-min) {
+    .sm-w-3\/4.alone-last { margin-left: 12.5%; }
+    .sm-w-1\/2.alone-last { margin-left: 25%; }
+    .sm-w-1\/4.alone-last { margin-left: 37.5%; }
+}
+
+@media (min-width: $screen-md-min) {
+    .md-w-3\/4.alone-last { margin-left: 12.5%; }
+    .md-w-1\/2.alone-last { margin-left: 25%; }
+    .md-w-1\/4.alone-last { margin-left: 37.5%; }
+}
+
 @media (min-width: $screen-lg-min) {
     body > div.grid {
         width: 1280px;
     }
 
-    .lg-w-1\/4.alone-last {
-        margin-left: 37.5%;
-    }
-    .lg-w-1\/2.alone-last {
-        margin-left: 25%;
-    }
-    .lg-w-3\/4.alone-last {
-        margin-left: 12.5%;
-    }
+    .lg-w-3\/4.alone-last { margin-left: 12.5%; }
+    .lg-w-1\/2.alone-last { margin-left: 25%; }
+    .lg-w-1\/4.alone-last { margin-left: 37.5%; }
 }
 
 @media (max-width: $screen-xs-max) {
