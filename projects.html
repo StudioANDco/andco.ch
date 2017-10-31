@@ -1,0 +1,8 @@
+---
+layout: base
+---
+<div class="grid">
+    {% for project in site.projects %}
+        {% include projects_tn.html project=project lg=4 sm=2 %}
+    {% endfor %}
+</div>
