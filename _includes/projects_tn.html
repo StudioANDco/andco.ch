@@ -8,14 +8,4 @@
     </article>
 </div>
 
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "CreativeWork",
-  "@id": "{{ link_url }}",
-  "name": "{{ include.project.title }}",
-  "author": { "@id": "{{ site.url}}" },
-  "image": "{{ card_media }}",
-  "url": "{{ link_url }}"
-}
-</script>
+{% include projects_ld.html project=project %}
