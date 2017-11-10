@@ -182,5 +182,26 @@
           "openingHours": "Mo-Fr 09:00-17:00"
         }
     </script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "@id": "{{ site.url }}#organization",
+          "url": "{{ site.url }}",
+          "logo": "{{ site.url }}/files/cards/andco.png",
+          "contactPoint": [
+              {% for card in site.cards %}
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "{{ card.phone }}",
+                    "email": "{{ card.email }}",
+                    "contactType": "sales",
+                    "availableLanguage": ["French","English","German"]
+                }{% if forloop.last != true %},{% endif %}
+              {% endfor %}
+          ]
+        }
+</script>
 </body>
 </html>
