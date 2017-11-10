@@ -7,5 +7,5 @@ sign_long: Ms. Square
 email: square@andco.ch
 phone:
 phone_unformatted:
-slug: square.html
+slug: square
 ---

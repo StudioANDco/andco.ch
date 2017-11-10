@@ -1,4 +1,4 @@
-{% capture link_url %}{{ site.url}}/projects/{{ include.project.slug }}.html{% endcapture %}
+{% capture link_url %}{{ site.url}}/projects/{{ include.project.slug }}{% endcapture %}
 {% capture card_media %}{{ site.url}}/files/projects/{{ include.project.code }}.png{% endcapture %}
 <div class="grid__item lg-w-1/{{ include.lg | default: 4 }} sm-w-1/{{ include.sm | default: 4 }} xs-w-1/1">
     <article class="card">
