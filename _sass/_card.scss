@@ -39,8 +39,28 @@
     }
 }
 
+.card__title {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 0.25em;
+}
+
 .card__media {
     width: 100%;
+}
+
+.card--website {
+    opacity:0.9;
+}
+
+.card--rounded {
+    border-radius: 20px;
+
+    .card__media {
+        overflow: hidden;
+        border-radius: 20px;
+    } 
 }
 
 .card--padded {

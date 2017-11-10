@@ -1,17 +1,11 @@
+{% capture link_url %}{{ site.url}}/projects/{{ include.project.slug }}{% endcapture %}
+{% capture card_media %}{{ site.url}}/files/projects/{{ include.project.code }}.png{% endcapture %}
 <div class="grid__item lg-w-1/{{ include.lg | default: 4 }} sm-w-1/{{ include.sm | default: 4 }} xs-w-1/1">
     <article class="card">
-        <img class="card__media" src="/files/projects/{{ include.project.code }}.png" title="{{ include.project.title }}" alt="{{ include.project.title }}">
+        <a href="{{ link_url }}">
+            <img class="card__media" src="{{ card_media }}" title="{{ include.project.title }}" alt="{{ include.project.title }}">
+        </a>
     </article>
 </div>
 
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "CreativeWork",
-  "@id": "{{ site.url}}/projects/{{ include.project.title | slugify }}.html",
-  "name": "{{ include.project.title }}",
-  "author": { "@id": "{{ site.url}}" },
-  "image": "{{ site.url}}/files/projects/{{ include.project.code }}.png",
-  "url": "{{ site.url}}/projects/{{ include.project.title | slugify }}.html"
-}
-</script>
+{% include projects_ld.html project=project %}

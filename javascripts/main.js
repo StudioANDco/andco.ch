@@ -38,21 +38,23 @@ function fix_height() {
     });
 }
 
-align();
+document.addEventListener("DOMContentLoaded", function() {
+    align();
 
-setTimeout(fix_height, 550);
+    fix_height();
+    setTimeout(fix_height, 550);
 
+    var timeout = false;
+    window.addEventListener('resize', function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(align, 250);
+    });
 
-var timeout = false;
-window.addEventListener('resize', function() {
-    clearTimeout(timeout);
-    timeout = setTimeout(align, 250);
-});
-
-var cards = document.getElementsByClassName('card--business');
-Array.prototype.forEach.call(cards, function(card) {
-    card.addEventListener('click', function() {
-        var link = card.getElementsByClassName('card--link')[0];
-        link.click();
+    var cards = document.getElementsByClassName('card--business');
+    Array.prototype.forEach.call(cards, function(card) {
+        card.addEventListener('click', function() {
+            var link = card.getElementsByClassName('card--link')[0];
+            link.click();
+        });
     });
 });

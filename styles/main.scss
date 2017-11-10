@@ -34,9 +34,16 @@ body > nav {
 }
 
 nav {
-    ul {
+    > ul {
         list-style: none;
         margin: 10px 15px;
+        line-height: 35px;
+
+        display: flex;
+
+        li, a { height: 35px; }
+        a > span { display: none; }
+        a > img { height: 100%; }
     }
 
     a {
@@ -48,13 +55,13 @@ nav {
         }
     }
 
+    .navigation {
+        float: left;
+        li { margin-right: 2em; }
+    }
+
     .social {
         float: right;
-        height: 35px;
-
-        li, a { height: 35px; display: inline-block; }
-        a > span { display: none; }
-        a > img { height: 100%; }
     }
 
     li {
@@ -91,7 +98,27 @@ body > footer {
 
 @media (max-width: $screen-xs-max) {
     body > div.grid {
+        margin-top: 100px;
         width: 320px;
+    }
+
+    nav {
+        height: 6em;
+
+        .navigation, .navigation .logo, .social {
+            position: absolute;
+        }
+
+        .navigation {
+            top: 2.5em;
+            .logo {
+                top: -2.5em;
+            }
+        }
+        .social {
+            top: 0;
+            right: 0.5em;
+        }
     }
 
     .xs-hidden {

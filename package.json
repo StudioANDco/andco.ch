@@ -6,6 +6,7 @@
   "license": "private",
   "private": true,
   "devDependencies": {
+    "browser-sync": "^2.18.13",
     "kanbasu": "^1.4.0"
   }
 }

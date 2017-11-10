@@ -72,20 +72,30 @@
     </header>
 
     <nav>
+        <ul class="navigation">
+            <li class="logo">
+                <a href="{{ site.url }}" title="Studio ANDco Sàrl">
+                    <img src="{{ site.url }}/files/logo.png" alt="Logo du Studio ANDco"><span>Studio ANDco</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/projects">Nos réalisations</a>
+            </li>
+        </ul>
         <ul class="social">
             <li>
-                <a class="facebook" href="https://www.facebook.com/{{ site.facebook_username }}">
-                    <img src="{{ site.url }}/files/pictogram/facebook.png"><span>Facebook</span>
+                <a class="facebook" href="https://www.facebook.com/{{ site.facebook_username }}" title="Studio ANDco on Facebook">
+                    <img src="{{ site.url }}/files/pictogram/facebook.png" alt="Studio ANDco on Facebook"><span>Facebook</span>
                 </a>
             </li>
             <li>
-                <a class="instagram" href="https://www.instagram.com/{{ site.instagram_username }}">
-                    <img src="{{ site.url }}/files/pictogram/instagram.png"><span>Instagram</span>
+                <a class="instagram" href="https://www.instagram.com/{{ site.instagram_username }}" title="Studio ANDco on Instagram">
+                    <img src="{{ site.url }}/files/pictogram/instagram.png" alt="Studio ANDco on Instagram"><span>Instagram</span>
                 </a>
             </li>
             <li>
-                <a class="maps" href="https://www.google.ch/maps/place/ANDco/@46.2272173,7.3632894,17z/data=!3m1!4b1!4m5!3m4!1s0x478edc26a314c67d:0xfe3d7c62bd23336a!8m2!3d46.2272173!4d7.3654781?hl=en">
-                    <img src="{{ site.url }}/files/pictogram/maps.png"><span>Maps</span>
+                <a class="maps" href="https://www.google.ch/maps/place/ANDco/@46.2272173,7.3632894,17z/data=!3m1!4b1!4m5!3m4!1s0x478edc26a314c67d:0xfe3d7c62bd23336a!8m2!3d46.2272173!4d7.3654781?hl=en"  title="Studio ANDco on Google Maps">
+                    <img src="{{ site.url }}/files/pictogram/maps.png" alt="Studio ANDco on Google Maps"><span>Maps</span>
                 </a>
             </li>
         </ul>
@@ -165,12 +175,33 @@
             "https://www.facebook.com/{{ site.facebook_username }}",
             "http://instagram.com/{{ site.instagram_username }}",
             "http://www.linkedin.com/company/{{ site.linkedin_username }}",
-            "http://www.twittter.com/{{ site.twitter_username }}",
+            "http://www.twitter.com/{{ site.twitter_username }}",
             "http://www.github.com/{{ site.github_username }}"
           ],
           "hasMap": "https://www.google.ch/maps/place/ANDco/@46.2272173,7.3632894,17z/data=!3m1!4b1!4m5!3m4!1s0x478edc26a314c67d:0xfe3d7c62bd23336a!8m2!3d46.2272173!4d7.3654781?hl=en",
           "openingHours": "Mo-Fr 09:00-17:00"
         }
     </script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "@id": "{{ site.url }}#organization",
+          "url": "{{ site.url }}",
+          "logo": "{{ site.url }}/files/cards/andco.png",
+          "contactPoint": [
+              {% for card in site.cards %}
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "{{ card.phone }}",
+                    "email": "{{ card.email }}",
+                    "contactType": "sales",
+                    "availableLanguage": ["French","English","German"]
+                }{% if forloop.last != true %},{% endif %}
+              {% endfor %}
+          ]
+        }
+</script>
 </body>
 </html>
