@@ -54,8 +54,13 @@
     opacity:0.9;
 }
 
-.card--rounded{
-    border-radius:18px;
+.card--rounded {
+    border-radius: 20px;
+
+    .card__media {
+        overflow: hidden;
+        border-radius: 20px;
+    } 
 }
 
 .card--padded {
