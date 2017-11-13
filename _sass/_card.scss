@@ -50,6 +50,20 @@
     width: 100%;
 }
 
+.card__social {
+    ul {
+        list-style: none;
+        margin: 10px 15px;
+        line-height: 35px;
+
+        display: flex;
+
+        li, a { height: 35px; }
+        a > span { display: none; }
+        a > img { height: 100%; }
+    }
+}
+
 .card--website {
     opacity:0.95;
 }
@@ -69,12 +83,12 @@
     a {
     color:black;
     text-decoration:underline;
-    }
 
-    a:hover {
+    &hover
     text-decoration:line-through;
     }
 }
+
 
 .card--business {
     position: relative;
