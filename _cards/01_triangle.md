@@ -16,7 +16,7 @@ description: titi
 
 <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
 	 <article class="card ">
-		<img class="card__media" src="{{ site.url }}/files/cards/triangle/triangle-portrait.png" alt="Photoval logo" title="Photoval logo">
+		<img class="card__media" src="{{ site.url }}/files/cards/triangle/triangle-portrait.png" alt="Mr Triangle" title="Mr Triangle">
 	</article>
 </div>
 
@@ -36,3 +36,61 @@ description: titi
         </dl>
 	</article>
 </div>
+
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+</div>
+
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/triangle/01_january.jpg" alt="Calendrier" title="Calendrier">
+    </article>
+</div>
+
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/triangle/09_septembre.jpg" alt="Calendrier" title="Calendrier">
+    </article>
+</div>
+
+<div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/triangle/kyoto.jpg" alt="Japan Kyoto" title="Japan Kyoto">
+    </article>
+</div>
+
+<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+</div>
+
+<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+</div>
+
+<div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/triangle/pre_wedding.jpg" alt="Turkey Trabzon" title="Turkey Trabzon">
+    </article>
+</div>
+
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/triangle/dog.jpg" alt="Aquarelle Animal" title="Aquarelle Animal">
+    </article>
+</div>
+
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/triangle/gorilla.jpg" alt="Aquarelle Animal" title="Aquarelle Animal">
+    </article>
+</div>
+
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/triangle/elephant.jpg" alt="Aquarelle Animal" title="Aquarelle Animal">
+    </article>
+</div>
+
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/triangle/singe.jpg" alt="Aquarelle Animal" title="Aquarelle Animal">
+    </article>
+</div>
+
