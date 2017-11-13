@@ -51,7 +51,7 @@
 }
 
 .card__social {
-    ul {
+    > ul {
         list-style: none;
         margin: 10px 15px;
         line-height: 35px;
@@ -83,8 +83,9 @@
     a {
     color:black;
     text-decoration:underline;
+    }
 
-    &:hover
+    a:hover {
     text-decoration:line-through;
     }
 }
