@@ -39,6 +39,15 @@
     }
 }
 
+.card__centered {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5em;
+}
+
 .card__title {
     display: block;
     font-size: 1.2em;
@@ -83,15 +92,23 @@
     padding: 20px;
 
     a {
-    color:black;
-    text-decoration:underline;
+        color:black;
+        text-decoration:underline;
     }
 
     a:hover {
-    text-decoration:line-through;
+        text-decoration:line-through;
     }
 }
 
+.card--more {
+    background: black;
+    color: white;
+
+    a {
+        color: inherit;
+    }
+}
 
 .card--business {
     position: relative;

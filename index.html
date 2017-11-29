@@ -44,9 +44,19 @@ layout: base
 
     {% assign projects = site.projects | where_exp:'item', "item.homepage_order > 0" | sort: 'homepage_order' %}
     <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
-        {% for project in projects  limit: 4 %}
+        {% for project in projects  limit: 3 %}
             {% include projects_tn.html project=project lg=2 sm=2 %}
         {% endfor %}
+
+        <div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
+            <article class="card card--padded card--more">
+                <a href="{{ site.url }}/projects">
+                    <div class="card__centered" style="height: 240px;">
+                        <p>Découvrez toutes nos réalisations...</p>
+                    </div>
+                </a>
+            </article>
+        </div>
     </div>
 
     {% for project in projects offset: 4 %}
