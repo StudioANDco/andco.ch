@@ -1,10 +1,12 @@
+{% capture link_url %}{{ site.url }}/team/{{ include.card.slug }}{% endcapture %}
+{% capture sign_url %}{{ site.url }}/files/pictogram/{{ include.card.sign }}.png{% endcapture %}
 <div class="grid__item lg-w-1/{{ include.lg | default: 4 }} sm-w-1/{{ include.sm | default: 2 }} xs-w-1/1 {{ include.extra_class }}">
     <article class="card card--padded card--business">
         <header>
-            <img src="{{ site.url }}/files/pictogram/{{ include.card.sign }}.png" title="{{ include.card.name }} Business Card" alt="{{ include.card.name }} Business Card">
-            <h1>{{ include.card.name }}</h1>
-            <h2>{{ include.card.sign_long }}</h2>
-            <h3>{{ include.card.title }}</h3>
+            <img src="{{ sign_url }}" title="{{ include.card.name }} Business Card" alt="{{ include.card.name }} Business Card">
+            <h1><a class="card--link" href="{{ link_url }}">{{ include.card.name }}</a></h1>
+            <h2><a href="{{ link_url }}">{{ include.card.sign_long }}</a></h2>
+            <h3><a href="{{ link_url }}">{{ include.card.title }}</a></h3>
         </header>
 
         <address>
@@ -30,11 +32,11 @@
   "alternateName": "{{ include.card.sign_long }}",
   "jobTitle": "{{ include.card.role }}",
   "image": [
-    "{{ site.url }}/files/pictogram/{{ include.card.sign }}.png",
+    "{{ sign_url }}",
     "{{ site.url }}/files/poster/{{ include.card.sign }}.png.jpg"
   ],
 
-  "url": "{{ site.url}}/team/{{ include.card.slug }}",
+  "url": "{{ link_url }}",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "{{ site.street }}",

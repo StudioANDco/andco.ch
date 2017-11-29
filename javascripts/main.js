@@ -23,7 +23,8 @@ function align() {
 }
 
 function fix_height() {
-    document.querySelectorAll('.card').forEach(function(el) {
+    cards = document.querySelectorAll('.card');
+    Array.prototype.forEach.call(cards, function(el) {
         const style = window.getComputedStyle(el);
 
         const top = +style.marginTop.replace('px', '');
@@ -47,5 +48,13 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('resize', function() {
         clearTimeout(timeout);
         timeout = setTimeout(align, 250);
+    });
+
+    var cards = document.getElementsByClassName('card--business');
+    Array.prototype.forEach.call(cards, function(card) {
+        card.addEventListener('click', function() {
+            var link = card.getElementsByClassName('card--link')[0];
+            link.click();
+        });
     });
 });
