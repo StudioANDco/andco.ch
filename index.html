@@ -63,6 +63,63 @@ layout: base
         {% include projects_tn.html project=project lg=4 sm=2 %}
     {% endfor %}
 
+    <div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+    </div>
+
+    <div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/1">
+        <article class="card card--padded">
+            <h2 class="card__title">Nos prestations en un coup d'oeil</h2>
+
+            <div class="grid" style="margin-left: 0;">
+                <div class="grid__item sm-w-1/2">
+                    <dl>
+                        <dt>Identité Graphique Complète</dt>
+                        <dd>Logo</dd>
+                        <dd>Carte de visite</dd>
+                        <dd>Papiers à entête</dd>
+                        <dd>Enveloppes et autres papetteries</dd>
+                    </dl>
+                </div>
+                <div class="grid__item sm-w-1/2">
+                    <dl>
+                        <dt>Charte Graphique</dt>
+                        <dd>Déclinaison de logo</dd>
+                        <dd>Palette de couleurs</dd>
+                        <dd>Canvas pour poster, flyer, et autres</dd>
+                    </dl>
+                </div>
+
+                <div class="grid__item sm-w-1/2">
+                    <dl>
+                        <dt>Design</dt>
+                        <dd>Brochures</dd>
+                        <dd>Posters</dd>
+                        <dd>Packagings</dd>
+                        <dd>Étiquettes</dd>
+                    </dl>
+                </div>
+                <div class="grid__item sm-w-1/2">
+                    <dl>
+                        <dt>Web et Développement</dt>
+                        <dd>Site internet</dd>
+                        <dd>E-commerce</dd>
+                        <dd>SEO et Analytics</dd>
+                        <dd>Logicels sur mesure</dd>
+                    </dl>
+                </div>
+            </div>
+            <dl>
+
+            </dl>
+
+            <p style="margin-bottom: 0;">Des questions ?</p>
+            <p style="margin-bottom: 0; margin-top: 0;">Envie de travailler avec nous ?</p>
+            <p style="margin-bottom: 0; margin-top: 0;">Besoin d'un devis ?</p>
+            <p style="margin-left: 4em; font-size: 1.2em; ">Contactez-nous: <a href="mailto:hello@andco.ch">hello@andco.ch</a></p>
+
+        </article>
+    </div>
+
     {% for poster in site.cards %}
         {% capture extra %}{% if forloop.last %}alone-last{% endif %}{% endcapture %}
         {% include posters.html poster=poster extra_class=extra %}
