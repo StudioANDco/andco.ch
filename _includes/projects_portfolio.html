@@ -1,0 +1,16 @@
+{% capture card_media %}{{ site.url}}/files/projects/{{ include.project.code }}.png{% endcapture %}
+<div class="grid__item sm-w-1/2">
+    <article class="card">
+        <img class="card__media" src="{{ card_media }}" title="{{ include.project.title }}" alt="{{ include.project.title }}">
+    </article>
+</div>
+<div class="grid__item sm-w-1/2">
+    <article class="card card--padded">
+        <h2 class="card__title">{{ include.project.title }}</h2>
+        <p>
+            {{ include.project.description }}
+        </p>
+    </article>
+</div>
+
+{% include projects_ld.html project=project %}

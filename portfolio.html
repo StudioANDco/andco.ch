@@ -1,0 +1,52 @@
+---
+layout: base
+---
+<div class="grid grid--portfolio">
+    <div class="grid__item sm-w-1/2 cover-page">
+        <div class="card card--padded">
+            Studio ANDco
+        </div>
+    </div>
+    <div class="grid__item sm-w-1/2 cover-page">
+        <div class="card card--padded">
+            Studio ANDco
+        </div>
+    </div>
+
+    <div class="grid__item sm-w-1/2">
+        <div class="grid">
+            {% for poster in site.cards %}
+                {% capture extra %}{% if forloop.last %}alone-last{% endif %}{% endcapture %}
+                {% include posters.html poster=poster extra_class=extra double='none' %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="grid__item sm-w-1/2">
+        <article class="card card--padded">
+            <p><b>Le Studio ANDco</b> est une agence de communication print et digitale qui réponds à toutes formes de demandes.
+                Nous sommes en mesure de résoudre les équations les plus complexes.
+                Nous vous aiguillerons concernant vos besoins.
+                Nous vous permettrons d'établir des parallèles.
+                Nous vous éviterons de tourner en rond.
+                Nous arrondirons les angles en cas de besoin.
+
+            <p>Soyez également sûr que nous y mettrons la forme.
+                Bref, avec nous, vous tenez une formule gagnante !</p>
+        </article>
+    </div>
+
+
+    {% assign projects = site.projects | sort: 'homepage_order' %}
+    {% for project in projects %}
+        {% include projects_portfolio.html project=project %}
+    {% endfor %}
+
+    <div class="grid__item sm-w-1/2">
+        <div class="grid">
+            {% for card in site.cards %}
+                {% capture extra %}{% if forloop.last %}alone-last{% endif %}{% endcapture %}
+                {% include cards.html card=card lg=2 extra_class=extra %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

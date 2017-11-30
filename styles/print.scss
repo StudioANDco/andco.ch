@@ -1,15 +1,22 @@
 ---
 ---
-html {
+html,
+body {
     background: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    display: none;
 }
 
 body > div.grid {
-    margin: 90px auto 0 !important;
+    margin: 0 auto !important;
     width: 100%;
 }
 
-.grid__item {
+.grid__item.sm-w-1\/2 {
     width: 50% !important;
 }
 
@@ -22,4 +29,63 @@ body > div.grid {
 
     box-shadow: none;
     border: 1px solid black;
+}
+
+.grid--portfolio {
+    .cover-page {
+        background: black;
+        color: white;
+    }
+
+    > .grid__item {
+        width: 210mm !important;
+        height: 297mm !important;
+        padding: 2cm !important;
+
+        border: 1mm solid red;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+
+        .grid {
+            margin: 0;
+            width: 170mm;
+
+            > .grid__item {
+                padding: 0.5cm;
+            }
+        }
+    }
+
+    .card {
+        margin: 0 !important;
+        width: 100%;
+        border: none;
+
+        &.card--padded {
+            margin-left: 6cm;
+            padding-left: 1cm;
+            padding-top: 0;
+            padding-bottom: 0;
+            width: 13cm;
+            border-left: 1px solid black;
+
+            > *:first-child {
+                margin-top: 0;
+                padding-top: 0;
+            }
+            > *:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .card__media {
+            max-width: 100%;
+            max-height: 100%;
+            margin: 0;
+        }
+    }
 }
