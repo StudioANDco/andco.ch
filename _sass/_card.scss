@@ -55,23 +55,24 @@
     margin-top: 0.25em;
 }
 
+
+
 .card__centered {
     text-align:center;
 }
 
-.card__black {
-    display: block;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 0.25em;
-    color:white;
-    background-color:black;
-    width:50%;
-    padding-left:4px;
+.prestation--bold {
+    font-weight:bold;
+}
+
+.prestation--img {
+    width:60px;
 }
 
 .card__line {
-    border-bottom:2px solid;
+    border-bottom:1px solid;
+    padding-bottom:15px;
+    margin-bottom:15px;
 }
 
 .card__media {
