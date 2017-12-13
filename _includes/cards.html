@@ -18,7 +18,9 @@
 
             <a class="url"  href="{{ site.url }}#{{ include.card.sign }}">andco.ch</a>
             <a class="email" href="mailto:{{ include.card.email }}">{{ include.card.email }}</a>
-            <a class="phone" href="tel:{{ include.card.phone_unformatted }}">{{ include.card.phone }}</a>
+            {% if include.card.phone %}
+                <a class="phone" href="tel:{{ include.card.phone_unformatted }}">{{ include.card.phone }}</a>
+            {% endif %}
         </address>
     </article>
 </div>
