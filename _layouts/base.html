@@ -3,7 +3,7 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# business: http://ogp.me/ns/business#" itemscope itemtype="http://schema.org/WebSite">
     <meta charset="utf-8" />
 
-    <title>Graphisme - Communication Visuelle - Webdesign - {{ site.title }}</title>
+    <title>Graphisme - Communication Visuelle - Webdesign - {{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />

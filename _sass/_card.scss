@@ -61,6 +61,20 @@
     text-align:center;
 }
 
+.prestation ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+        margin-bottom:  0.5em;
+    }
+
+    li.header {
+        font-weight: bold;
+    }
+}
+
 .prestation--bold {
     font-weight:bold;
 }
