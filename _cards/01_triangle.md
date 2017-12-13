@@ -16,7 +16,7 @@ description: titi
 
 <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
 	 <article class="card ">
-		<img class="card__media" src="{{ site.url }}/files/cards/triangle/triangle-portrait.png" alt="Mr Triangle" title="Mr Triangle">
+		<img class="card__media" src="{{ site.url }}/files/cards/triangle/triangle-portrait.jpg" alt="Mr Triangle" title="Mr Triangle">
 	</article>
 </div>
 

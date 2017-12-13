@@ -1,4 +1,4 @@
-{% capture card_media %}{{ site.url}}/files/projects/{{ include.project.code }}.png{% endcapture %}
+{% capture card_media %}{{ site.url}}/files/projects/{{ include.project.card_media }}{% endcapture %}
 <div class="grid__item sm-w-1/2">
     <article class="card">
         <img class="card__media" src="{{ card_media }}" title="{{ include.project.title }}" alt="{{ include.project.title }}">
