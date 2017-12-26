@@ -57,6 +57,13 @@
 </head>
 
 <body>
+    <script type="text/javascript">
+        var github_url = 'https://studioandco.github.io/andco.ch';
+        var current = window.location.href;
+        if(current.indexOf(github_url) === 0) {
+            window.location.href = current.replace(github_url, 'https://andco.ch');
+        }
+    </script>
     <header>
         <h1>Studio ANDco</h1>
         <h2>Swiss design agency</h2>
