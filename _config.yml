@@ -20,7 +20,7 @@ longitude: "7.365095"
 ga: "UA-77883422-1"
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://andco.ch" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://andco.ch" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ANDco_o
 github_username:  StudioANDco
 facebook_username: andcohello
