@@ -26,8 +26,25 @@
     }
 }
 
+.card--tv {
+    &:after {
+        content: ' ';
+        display: block;
+
+        background: url('/files/tele.png') no-repeat center bottom;
+        background-size: contain;
+
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+    }
+}
+
 .card--planche {
-    &:before, &:after {
+    &:before {
         width: 1320px;
         height: 120px;
         background: url('/files/planche-1-1.png') no-repeat center center;
@@ -40,21 +57,21 @@
 }
 
 @media (min-width: $screen-sm-min) {
-    .sm-w-3\/4 .card--planche { &:before, &:after { background-image: url('/files/planche-1-3.png'); width: 1000px; } }
-    .sm-w-1\/2 .card--planche { &:before, &:after { background-image: url('/files/planche-1-2.png'); width: 680px; } }
-    .sm-w-1\/4 .card--planche { &:before, &:after { background-image: url('/files/planche-1-4.png'); width: 360px; } }
+    .sm-w-3\/4 .card--planche { &:before { background-image: url('/files/planche-1-3.png'); width: 1000px; } }
+    .sm-w-1\/2 .card--planche { &:before { background-image: url('/files/planche-1-2.png'); width: 680px; } }
+    .sm-w-1\/4 .card--planche { &:before { background-image: url('/files/planche-1-4.png'); width: 360px; } }
 }
 
 @media (min-width: $screen-md-min) {
-    .md-w-3\/4 .card--planche { &:before, &:after { background-image: url('/files/planche-1-3.png'); width: 1000px; } }
-    .md-w-1\/2 .card--planche { &:before, &:after { background-image: url('/files/planche-1-2.png'); width: 680px; } }
-    .md-w-1\/4 .card--planche { &:before, &:after { background-image: url('/files/planche-1-4.png'); width: 360px; } }
+    .md-w-3\/4 .card--planche { &:before { background-image: url('/files/planche-1-3.png'); width: 1000px; } }
+    .md-w-1\/2 .card--planche { &:before { background-image: url('/files/planche-1-2.png'); width: 680px; } }
+    .md-w-1\/4 .card--planche { &:before { background-image: url('/files/planche-1-4.png'); width: 360px; } }
 }
 
 @media (min-width: $screen-lg-min) {
-    .lg-w-3\/4 .card--planche { &:before, &:after { background-image: url('/files/planche-1-3.png'); width: 1000px; } }
-    .lg-w-1\/2 .card--planche { &:before, &:after { background-image: url('/files/planche-1-2.png'); width: 680px; } }
-    .lg-w-1\/4 .card--planche { &:before, &:after { background-image: url('/files/planche-1-4.png'); width: 360px; } }
+    .lg-w-3\/4 .card--planche { &:before { background-image: url('/files/planche-1-3.png'); width: 1000px; } }
+    .lg-w-1\/2 .card--planche { &:before { background-image: url('/files/planche-1-2.png'); width: 680px; } }
+    .lg-w-1\/4 .card--planche { &:before { background-image: url('/files/planche-1-4.png'); width: 360px; } }
 }
 
 
