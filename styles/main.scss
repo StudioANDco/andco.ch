@@ -12,8 +12,13 @@ body {
     margin-bottom: 60px;
 }
 
+.nav-container,
 body > div.grid {
     width: 640px;
+    margin: 0 auto;
+}
+
+body > div.grid {
     margin: 60px auto 0;
     position: relative;
 
@@ -25,8 +30,7 @@ body > div.grid {
 body > nav {
     position: fixed;
     top: 0;
-    width:  80%;
-    margin:  0 10%;
+    width:  100%;
 
     background-color: black;
     color: white;
@@ -35,7 +39,7 @@ body > nav {
 }
 
 nav {
-    > ul {
+    ul {
         list-style: none;
         margin: 10px 15px;
         line-height: 35px;
@@ -88,6 +92,7 @@ body > footer {
 }
 
 @media (min-width: $screen-lg-min) {
+    .nav-container,
     body > div.grid {
         width: 1280px;
     }
@@ -98,9 +103,13 @@ body > footer {
 }
 
 @media (max-width: $screen-xs-max) {
+    .nav-container,
+    body > div.grid {
+        width: 320px;
+    }
+
     body > div.grid {
         margin-top: 100px;
-        width: 320px;
     }
 
     nav {
