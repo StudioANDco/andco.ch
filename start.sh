@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 BUNDLE=$(which bundle)
 RBENV=$(which rbenv)
 NPM=$(which npm)
@@ -17,7 +16,12 @@ fi
 
 BROWSERSYNC="./node_modules/.bin/browser-sync"
 if [[ ! -x "$BROWSERSYNC" ]]; then
-    ${COMMAND} install
+    ${NPM} install
+fi
+
+JEKYLL="./.bundle/packages/bundle/ruby/2.5.0/bin/jekyll"
+if [[ ! -x "$JEKYLL" ]]; then
+    ${BUNDLE} install --path .bundle/packages
 fi
 
 COMMAND="bundle exec jekyll serve"
