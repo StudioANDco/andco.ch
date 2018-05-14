@@ -101,12 +101,11 @@ published: true
             <div class="grid__item lg-w-1/2"></div>
             
             <div class="grid__item lg-w-1/2 w-1/1">
-                <article class="card card--padded prestation">
+                {% assign identite = site.services | where:"title", 'Flyer, brochures, posters' | first %}
+                <article class="card card--padded">
                     <a href="{{ site.url }}/team/triangle"><img class="prestation__media" src="{{ site.url }}/files/pictogram/triangle.png" alt="Mr. Triangle"></a>
-                    <h2 class="card__title">Flyer, brochures, posters</h2>
-                    <p>
-                        Mr. Triangle saura vous diriger à l'essentielle vos communications, au travers des différents supports publicitaires tel que les flyer, borchures et poster.
-                    </p>
+                    <h2 class="card__title">{{ identite.title }}</h2>
+                    {{ identite.content }}
                 </article>
             </div>
             
@@ -159,12 +158,11 @@ published: true
             </div>
             
             <div class="grid__item lg-w-1/2 w-1/1">
-                <article class="card card--padded prestation">
+                {% assign identite = site.services | where:"title", 'Packagings' | first %}
+                <article class="card card--padded">
                     <a href="{{ site.url }}/team/triangle"><img class="prestation__media" src="{{ site.url }}/files/pictogram/triangle.png" alt="Mr. Triangle"></a>
-                    <h2 class="card__title">Packagings</h2>
-                    <p>
-                        Packagings packagings de truc cool habillage des surfaces, cartonnage avec partenaire…
-                    </p>
+                    <h2 class="card__title">{{ identite.title }}</h2>
+                    {{ identite.content }}
                 </article>
             </div>
             
@@ -202,15 +200,11 @@ published: true
             </div>
             
             <div class="grid__item lg-w-1/2 w-1/1">
-                <article class="card card--padded prestation">
-                    <a href="{{ site.url }}/team/circle"><img class="prestation__media" src="{{ site.url }}/files/pictogram/circle.png" alt="Mr. Cricle"></a>
-                    <h2 class="card__title">Web et développement en faim</h2>
-                    <p>
-                        C'est au près du wavy master, Mr. Circle, que vous pourrez développer le squellette de vos site internet, en l'étoffant d'un E-commerce ou en augementant sa visibilité grâce au SEO et Analytics. 
-                    </p>
-                    <p>
-                    Un sur mesure à votre image digital.
-                    </p>
+                {% assign identite = site.services | where:"title", 'Web et développement' | first %}
+                <article class="card card--padded">
+                    <a href="{{ site.url }}/team/triangle"><img class="prestation__media" src="{{ site.url }}/files/pictogram/circle.png" alt="Mr. Triangle"></a>
+                    <h2 class="card__title">{{ identite.title }}</h2>
+                    {{ identite.content }}
                 </article>
             </div>
             
