@@ -44,19 +44,23 @@
 }
 
 $planche-heigth: 10px;
-.card--planche:before {
-    width: 100%;
-    height: $planche-heigth;
-    background: url('/files/planche-1-1.png') no-repeat center center;
-    background-size: auto 100%;
-
-    left: 0;
-    bottom: -$planche-heigth;
-    top: auto;
-
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 3px 5px 5px rgba(0,0,0,0.24);
+.card--planche{
+    background: none;
+    box-shadow: none;
+    
+    &:before {
+        width: 100%;
+        height: $planche-heigth;
+        background: url('/files/planche-1-1.png') no-repeat center center;
+        background-size: auto 100%;
+    
+        left: 0;
+        bottom: -$planche-heigth;
+        top: auto;
+    
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 3px 5px 5px rgba(0,0,0,0.24);
+    }    
 }
-
 .w-3\/4 .card--planche:before { background-image: url('/files/planche-1-3.png'); }
 .w-1\/2 .card--planche:before { background-image: url('/files/planche-1-2.png'); }
 .w-1\/4 .card--planche:before { background-image: url('/files/planche-1-4.png'); }

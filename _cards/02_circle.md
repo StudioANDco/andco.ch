@@ -14,7 +14,7 @@ slug: circle
 </div>
 
 <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
-	<article class="card card--padded" style="font-size: 1.4em;">
+	<article class="card card--padded">
 		<h2 class="card__title">Mr. Circle</h2>
 		<dl>
 			<dt><a href="https://www.liip.ch/en">Liip SA</a>, Lausanne</dt>
