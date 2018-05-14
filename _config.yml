@@ -60,6 +60,8 @@ collections:
     cards:
         output: true
         permalink: /team/:title
+    services:
+        output: false
     projects:
         output: true
         permalink: /projects/:title

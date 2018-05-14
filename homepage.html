@@ -24,20 +24,12 @@ published: false
     {% endfor %}
     
     <div class="grid__item alone-last lg-w-1/2 sm-w-1/1 xs-w-1/1">
+        {% assign studio = site.services | where:"title", 'Le Studio ANDco' | first %}
         <article class="card card--padded">
-            <h2 class="card__title">Le Studio ANDco</h2>
-            <p>
-                est une agence de graphisme et développement web qui répond à toutes formes de demandes.
-                Nous sommes en mesure de résoudre les équations les plus complexes.
-                Nous vous aiguillerons concernant vos besoins.
-                Nous vous permettrons d'établir des parallèles.
-                Nous vous éviterons de tourner en rond.
-                Nous arrondirons les angles en cas de besoin.
-                
-                <p>Soyez également sûr que nous y mettrons la forme.
-                    Bref, avec nous, vous tenez une formule gagnante !</p>
-                </article>
-            </div>
+            <h2 class="card__title">{{ studio.title }}</h2>
+            {{ studio.content }}
+        </article>
+    </div>
             
             <!-- identité graphique -->
             <div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
@@ -55,18 +47,11 @@ published: false
             <div class="grid__item lg-w-1/4 "></div>
             
             <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
-                <article class="card card--padded prestation">
+                {% assign identite = site.services | where:"title", 'Identité Graphique' | first %}
+                <article class="card card--padded">
                     <a href="{{ site.url }}/team/triangle"><img class="prestation__media" src="{{ site.url }}/files/pictogram/triangle.png" alt="Mr. Triangle"></a>
-                    <h2 class="card__title">Identité graphique</h2>
-                    <p>
-                        C'est au côté de Mr.Triangle que votre identité graphique prendra forme.
-                    </p>
-                    <p>
-                        Attentif à vos besoins, il vous aiguillera tout au long du processus de créations, de part un choix réflechit de couleurs, de formes et de typographie. 
-                    </p>
-                    <p>
-                        Donnant ainsi vie à une identité visuelle unique, au travers d'un logo, de cartes de visite, de papier à lettre, d'enveloppes et de divers papetteries…
-                    </p>
+                    <h2 class="card__title">{{ identite.title }}</h2>
+                    {{ identite.content }}
                 </article>
             </div>
             
