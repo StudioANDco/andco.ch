@@ -30,8 +30,35 @@ published: true
             {{ studio.content }}
         </article>
     </div>
+
+    {% assign projects = site.projects | where:'homepage_push', true %}
+    {% for project in projects %}
+        {% include projects_tn.html project=project lg=2 sm=1 %}
+    {% endfor %}
+
+    {% assign projects = site.projects | where_exp:'item', "item.homepage_order > 0" | sort: 'homepage_order' %}
+    <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+        {% for project in projects  limit: 3 %}
+            {% include projects_tn.html project=project lg=2 sm=2 %}
+        {% endfor %}
+
+        <div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
+            <article class="card card--padded card--more">
+                <a href="{{ site.url }}/projects">
+                    <div class="card__centered" style="height: 240px;">
+                        <img src="{{ site.url }}/files/projects/plus.png" style="height:40%;" alt="Afficher tous nos projets">
+                    </div>
+                </a>
+            </article>
+        </div>
+    </div>
+
+    {% for project in projects offset: 4 %}
+        {% include projects_tn.html project=project lg=4 sm=2 %}
+    {% endfor %}
             
-            <!-- identité graphique -->
+
+        <!-- identité graphique 
             <div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
                 <article class="card ">
                     <img class="card__media" src="{{ site.url }}/files/projects/cabine.jpg" alt="La Cabine Logo" title="La Cabine Logo">
@@ -45,6 +72,7 @@ published: true
             </div>
             
             <div class="grid__item lg-w-1/4 "></div>
+        -->
             
             <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
                 {% assign identite = site.services | where:"title", 'Identité Graphique' | first %}
