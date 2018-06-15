@@ -1,0 +1,140 @@
+---
+layout: base
+---
+<div class="grid">
+    <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
+        <article class="card" style="margin-bottom: 20px;">
+            <address class="hidden">
+                <span class="name">{{ site.title }}</span>
+                <span class="street">{{ site.street }}</span>
+                <span class="city">{{ site.zip }} {{ site.city }}</span>
+                <span class="country">{{ site.state }} - {{ site.country }}</span>
+
+                <a class="url" href="{{ site.url }}">andco.ch</a>
+                <a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+            </address>
+
+            <img class="card__media" src="/files/cards/andco.png" alt="Studio ANDco Sàrl business card" title="Studio ANDco Sàrl business card">
+        </article>
+    </div>
+
+    {% for card in site.cards %}
+        {% include cards.html card=card %}
+    {% endfor %}
+
+    <div class="grid__item alone-last lg-w-1/2 sm-w-1/1 xs-w-1/1">
+        <article class="card card--padded">
+            <h2 class="card__title">Le Studio ANDco</h2> 
+            <p>est une agence de graphisme et développement web qui répond à toutes formes de demandes.
+               Nous sommes en mesure de résoudre les équations les plus complexes.
+               Nous vous aiguillerons concernant vos besoins.
+               Nous vous permettrons d'établir des parallèles.
+               Nous vous éviterons de tourner en rond.
+               Nous arrondirons les angles en cas de besoin.
+
+            <p>Soyez également sûr que nous y mettrons la forme.
+               Bref, avec nous, vous tenez une formule gagnante !</p>
+
+        </article>
+    </div>
+
+    {% assign projects = site.projects | where:'homepage_push', true %}
+    {% for project in projects %}
+        {% include projects_tn.html project=project lg=2 sm=1 %}
+    {% endfor %}
+
+    {% assign projects = site.projects | where_exp:'item', "item.homepage_order > 0" | sort: 'homepage_order' %}
+    <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+        {% for project in projects  limit: 3 %}
+            {% include projects_tn.html project=project lg=2 sm=2 %}
+        {% endfor %}
+
+        <div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
+            <article class="card card--padded card--more">
+                <a href="{{ site.url }}/projects">
+                    <div class="card__centered" style="height: 240px;">
+                        <img src="{{ site.url }}/files/projects/plus.png" style="height:40%;" alt="Afficher tous nos projets">
+                    </div>
+                </a>
+            </article>
+        </div>
+    </div>
+
+    {% for project in projects offset: 4 %}
+        {% include projects_tn.html project=project lg=4 sm=2 %}
+    {% endfor %}
+
+    <div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+    </div>
+
+    <div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/1">
+        <article class="card card--padded">
+            <h2 class="card__title card__line">Nos prestations en un coup d'oeil</h2>
+
+            <div class="grid prestation" style="margin-left: 0;">
+                <div class="grid__item card__line sm-w-1/2 ">
+                        <img class="prestation__media" src="{{ site.url }}/files/pictogram/triangle.png" alt="Mr. Triangle">
+                    <ul>
+                        <li class="prestation__header">Identité Graphique</li>
+                        <li>Logo</li>
+                        <li>Carte de visite</li>
+                        <li>Papiers à entête</li>
+                        <li>Enveloppes et autres papetteries</li>
+                    </ul>
+                </div>
+                <div class="grid__item card__line sm-w-1/2">
+                        <img class="prestation__media" src="{{ site.url }}/files/pictogram/triangle.png" alt="Mr. Triangle">
+                    <ul>
+                        <li class="prestation__header" class="">Charte Graphique</li>
+                        <li>Déclinaison de logo</li>
+                        <li>Palette de couleurs</li>
+                        <li>Canvas pour poster, flyer, et autres</li>
+                        <li>Présentation</li>
+                    </ul>
+                </div>
+
+                <div class="grid__item card__line sm-w-1/2">
+                        <img class="prestation__media" src="{{ site.url }}/files/pictogram/triangle.png" alt="Mr. Triangle">
+                    <ul>
+                        <li class="prestation__header" class="">Design</li>
+                        <li>Brochures</li>
+                        <li>Posters</li>
+                        <li>Packagings</li>
+                        <li>Étiquettes</li>
+                    </ul>
+                </div>
+                <div class="grid__item card__line sm-w-1/2">
+                    <img class="prestation__media" src="{{ site.url }}/files/pictogram/circle.png" alt="Mr. Circle">
+                    <ul>
+                        <li class="prestation__header" class="">Web et Développement</li>
+                        <li>Site internet</li>
+                        <li>E-commerce</li>
+                        <li>SEO et Analytics</li>
+                        <li>Logicels sur mesure</li>
+                    </ul>
+                </div>
+
+                <div class="grid__item sm-w-1/2 ">
+                    <ul>
+                        <li class="prestation__header">Des questions ?</li>
+                        <li class="prestation__header">Envie de travailler avec nous ?</li>
+                        <li class="prestation__header">Besoin d'un devis ?</li>
+                    </ul>
+                </div>
+
+                <div class="grid__item sm-w-1/2 ">
+                    <ul>
+                        <li class="prestation__header">Contactez-nous: </li>
+                        <li class="prestation__header"><a href="mailto:hello@andco.ch">hello@andco.ch</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </article>
+    </div>
+
+    {% for poster in site.cards %}
+        {% capture extra %}{% if forloop.last %}alone-last{% endif %}{% endcapture %}
+        {% include posters.html poster=poster extra_class=extra %}
+    {% endfor %}
+</div>

@@ -1,5 +1,6 @@
 ---
 layout: base
+published: true
 ---
 <div class="grid">
     <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
@@ -9,32 +10,24 @@ layout: base
                 <span class="street">{{ site.street }}</span>
                 <span class="city">{{ site.zip }} {{ site.city }}</span>
                 <span class="country">{{ site.state }} - {{ site.country }}</span>
-
+                
                 <a class="url" href="{{ site.url }}">andco.ch</a>
                 <a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a>
             </address>
-
+            
             <img class="card__media" src="/files/cards/andco.png" alt="Studio ANDco Sàrl business card" title="Studio ANDco Sàrl business card">
         </article>
     </div>
-
+    
     {% for card in site.cards %}
-        {% include cards.html card=card %}
+    {% include cards.html card=card %}
     {% endfor %}
-
+    
     <div class="grid__item alone-last lg-w-1/2 sm-w-1/1 xs-w-1/1">
+        {% assign studio = site.services | where:"title", 'Le Studio ANDco' | first %}
         <article class="card card--padded">
-            <h2 class="card__title">Le Studio ANDco</h2> 
-            <p>est une agence de graphisme et développement web qui répond à toutes formes de demandes.
-               Nous sommes en mesure de résoudre les équations les plus complexes.
-               Nous vous aiguillerons concernant vos besoins.
-               Nous vous permettrons d'établir des parallèles.
-               Nous vous éviterons de tourner en rond.
-               Nous arrondirons les angles en cas de besoin.
-
-            <p>Soyez également sûr que nous y mettrons la forme.
-               Bref, avec nous, vous tenez une formule gagnante !</p>
-
+            <h2 class="card__title">{{ studio.title }}</h2>
+            {{ studio.content }}
         </article>
     </div>
 
@@ -63,78 +56,207 @@ layout: base
     {% for project in projects offset: 4 %}
         {% include projects_tn.html project=project lg=4 sm=2 %}
     {% endfor %}
+            
 
-    <div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
-    </div>
-
-    <div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/1">
-        <article class="card card--padded">
-            <h2 class="card__title card__line">Nos prestations en un coup d'oeil</h2>
-
-            <div class="grid prestation" style="margin-left: 0;">
-                <div class="grid__item card__line sm-w-1/2 ">
-                        <img class="prestation__media" src="{{ site.url }}/files/pictogram/triangle.png" alt="Mr. Triangle">
-                    <ul>
-                        <li class="prestation__header">Identité Graphique</li>
-                        <li>Logo</li>
-                        <li>Carte de visite</li>
-                        <li>Papiers à entête</li>
-                        <li>Enveloppes et autres papetteries</li>
-                    </ul>
-                </div>
-                <div class="grid__item card__line sm-w-1/2">
-                        <img class="prestation__media" src="{{ site.url }}/files/pictogram/triangle.png" alt="Mr. Triangle">
-                    <ul>
-                        <li class="prestation__header" class="">Charte Graphique</li>
-                        <li>Déclinaison de logo</li>
-                        <li>Palette de couleurs</li>
-                        <li>Canvas pour poster, flyer, et autres</li>
-                        <li>Présentation</li>
-                    </ul>
-                </div>
-
-                <div class="grid__item card__line sm-w-1/2">
-                        <img class="prestation__media" src="{{ site.url }}/files/pictogram/triangle.png" alt="Mr. Triangle">
-                    <ul>
-                        <li class="prestation__header" class="">Design</li>
-                        <li>Brochures</li>
-                        <li>Posters</li>
-                        <li>Packagings</li>
-                        <li>Étiquettes</li>
-                    </ul>
-                </div>
-                <div class="grid__item card__line sm-w-1/2">
-                    <img class="prestation__media" src="{{ site.url }}/files/pictogram/circle.png" alt="Mr. Circle">
-                    <ul>
-                        <li class="prestation__header" class="">Web et Développement</li>
-                        <li>Site internet</li>
-                        <li>E-commerce</li>
-                        <li>SEO et Analytics</li>
-                        <li>Logicels sur mesure</li>
-                    </ul>
-                </div>
-
-                <div class="grid__item sm-w-1/2 ">
-                    <ul>
-                        <li class="prestation__header">Des questions ?</li>
-                        <li class="prestation__header">Envie de travailler avec nous ?</li>
-                        <li class="prestation__header">Besoin d'un devis ?</li>
-                    </ul>
-                </div>
-
-                <div class="grid__item sm-w-1/2 ">
-                    <ul>
-                        <li class="prestation__header">Contactez-nous: </li>
-                        <li class="prestation__header"><a href="mailto:hello@andco.ch">hello@andco.ch</a></li>
-                    </ul>
-                </div>
+        <!-- identité graphique 
+            <div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
+                <article class="card ">
+                    <img class="card__media" src="{{ site.url }}/files/projects/cabine.jpg" alt="La Cabine Logo" title="La Cabine Logo">
+                </article>
             </div>
-
-        </article>
-    </div>
-
-    {% for poster in site.cards %}
-        {% capture extra %}{% if forloop.last %}alone-last{% endif %}{% endcapture %}
-        {% include posters.html poster=poster extra_class=extra %}
-    {% endfor %}
-</div>
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
+                <article class="card ">
+                    <img class="card__media" src="{{ site.url }}/files/projects/taara.jpg" alt="La Cabine Logo" title="La Cabine Logo">
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/4 "></div>
+        -->
+            
+            <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+                {% assign identite = site.services | where:"title", 'Identité Graphique' | first %}
+                <article class="card card--padded">
+                    <a href="{{ site.url }}/team/triangle"><img class="prestation__media" src="{{ site.url }}/files/pictogram/triangle.png" alt="Mr. Triangle"></a>
+                    <h2 class="card__title">{{ identite.title }}</h2>
+                    {{ identite.content }}
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
+                <article class="card card--rounded">
+                    <a href="{{ site.url }}/projects/la_cabine"><img class="card__media" src="{{ site.url }}/files/projects/lacabine/purple2.jpg" alt="La Cabine carte membre" title="La Cabine carte membre"></a>
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
+                <article class="card card--rounded">
+                    <a href="{{ site.url }}/projects/la_cabine"><img class="card__media" src="{{ site.url }}/files/projects/lacabine/purple1.jpg" alt="La Cabine carte membre" title="La Cabine carte membre"></a>
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
+            </div>
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
+                <article class="card card--rounded">
+                    <a href="{{ site.url }}/projects/la_cabine"><img class="card__media" src="{{ site.url }}/files/projects/lacabine/blue2.jpg" alt="La Cabine carte membre" title="La Cabine carte membre"></a>
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
+                <article class="card card--rounded">
+                    <a href="{{ site.url }}/projects/la_cabine"><img class="card__media" src="{{ site.url }}/files/projects/lacabine/pink2.jpg" alt="La Cabine carte membre" title="La Cabine carte membre"></a>
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
+                <article class="card card--rounded">
+                    <a href="{{ site.url }}/projects/la_cabine"><img class="card__media" src="{{ site.url }}/files/projects/lacabine/yellow1.jpg" alt="La Cabine carte membre" title="La Cabine carte membre"></a>
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+                <article class="card card--planche">
+                    <img class="card__media" src="{{ site.url }}/files/elements/plante.png" alt="Plante" title="Mini Hubert">
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/2"></div>
+            
+            <!-- Brochures, flyer, Affiches-->
+            
+            <div class="grid__item lg-w-1/2"></div>
+            
+            <div class="grid__item lg-w-1/2 w-1/1">
+                {% assign identite = site.services | where:"title", 'Flyer, brochures, posters' | first %}
+                <article class="card card--padded">
+                    <a href="{{ site.url }}/team/triangle"><img class="prestation__media" src="{{ site.url }}/files/pictogram/triangle.png" alt="Mr. Triangle"></a>
+                    <h2 class="card__title">{{ identite.title }}</h2>
+                    {{ identite.content }}
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+                <article class="card ">
+                    <a href="{{ site.url }}/projects/assainimmob"><img class="card__media" src="{{ site.url }}/files/projects/assainimmob/brochure-1.jpg" alt="Assainimmob borchure" title="Assainimmob borchure"></a>
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+                <article class="card ">
+                    <a href="{{ site.url }}/projects/assainimmob"><img class="card__media" src="{{ site.url }}/files/projects/assainimmob/brochure-2.jpg" alt="Assainimmob borchure" title="Assainimmob borchure"></a>
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
+                <article class="card ">
+                    <img class="card__media" src="{{ site.url }}/files/projects/poster/chauve_poster.jpg" alt="Poster" title="Poster CHauve pour la bonne cause">
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
+                <article class="card ">
+                    <img class="card__media" src="{{ site.url }}/files/projects/poster/lost_flyer.jpg" alt="Poster" title="Lost in the mountains">
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+                <article class="card ">
+                    <img class="card__media" src="{{ site.url }}/files/projects/poster/hes-so_poster.jpg" alt="Poster" title="Infographie Erasmus, move office">
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
+                <article class="card card--planche">
+                    <img class="card__media" src="{{ site.url }}/files/elements/einstein.png" alt="Einstein" title="Einstein Figure">
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-3/4"></div>
+            
+            <!-- Packaging -->
+            
+            <div class="grid__item lg-w-1/2"></div>
+            
+            <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+                <article class="card card--planche">
+                    <a href="{{ site.url }}/projects/charlies"><img class="card__media" src="{{ site.url }}/files/projects/charlies/terrine.png" alt="Terrine Charlie's" title="Terrine Charlie's"></a>
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/2 w-1/1">
+                {% assign identite = site.services | where:"title", 'Packagings' | first %}
+                <article class="card card--padded">
+                    <a href="{{ site.url }}/team/triangle"><img class="prestation__media" src="{{ site.url }}/files/pictogram/triangle.png" alt="Mr. Triangle"></a>
+                    <h2 class="card__title">{{ identite.title }}</h2>
+                    {{ identite.content }}
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/2"></div>
+            <div class="grid__item lg-w-1/4"></div>
+            
+            <div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/1">
+                <article class="card card--planche">
+                    <a href="{{ site.url }}/projects/cave-lys"><img class="card__media" src="{{ site.url }}/files/projects/cave-lys/bouteille.png" alt="Cave du Lys" title="Cave du Lys"></a>
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-3/4"></div>
+            
+            <!-- site internet -->
+            
+            <!-- <div class="grid__item alone-last lg-w-1/2 sm-w-1/2 xs-w-1/1">
+                <article class="card card--planche">
+                    <img class="card__media" src="{{ site.url }}/files/elements/c3po.png" alt="C3-PO Star Wars" title="C3-PO Star Wars">
+                </article>
+            </div> -->
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/2"></div>
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/2">
+                <article class="card card--website">
+                    <a href="{{ site.url }}/projects/aux5t"><img class="card__media" src="{{ site.url }}/files/projects/aux5t/mobile.jpg" alt="Aux5t website" title="Aux5t website"></a>
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/1">
+                <article class="card card--website">
+                    <a href="{{ site.url }}/projects/aux5t"><img class="card__media" src="{{ site.url }}/files/projects/aux5t/index.jpg" alt="Aux5t website" title="Aux5t website"></a>
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/2 w-1/1">
+                {% assign identite = site.services | where:"title", 'Web et développement' | first %}
+                <article class="card card--padded">
+                    <a href="{{ site.url }}/team/triangle"><img class="prestation__media" src="{{ site.url }}/files/pictogram/circle.png" alt="Mr. Triangle"></a>
+                    <h2 class="card__title">{{ identite.title }}</h2>
+                    {{ identite.content }}
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/2">
+                <article class="card card--website">
+                    <img class="card__media" src="{{ site.url }}/files/projects/arta/arta-therapie.jpg" alt="Art'A website" title="Art'A website">
+                </article>
+            </div>
+            
+            <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/2">
+                <article class="card card--website">
+                    <img class="card__media" src="{{ site.url }}/files/projects/arta/arta-mobile.jpg" alt="Art'A website" title="Art'A website">
+                </article>
+            </div>
+            
+            <div class="grid__item alone-last lg-w-1/2 sm-w-1/1 xs-w-1/1">
+                <article class="card card--planche">
+                    <img class="card__media" src="{{ site.url }}/files/elements/olympus.png" alt="Camera" title="Camera">
+                </article>
+            </div>
+            
+            
+            {% for poster in site.cards %}
+            {% capture extra %}{% if forloop.last %}alone-last{% endif %}{% endcapture %}
+            {% include posters.html poster=poster extra_class=extra %}
+            {% endfor %}
+        </div>
