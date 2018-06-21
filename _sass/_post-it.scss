@@ -8,15 +8,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Kalam', cursive;
 
     cite {
         position: absolute;
         bottom: 1em;
         right: 1.5em;
+        font-size:1em;
     }
 
     blockquote {
         text-align: center;
+        font-size:1.6em;
+
     }
 }
 
