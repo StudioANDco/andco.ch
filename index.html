@@ -22,6 +22,22 @@ published: true
     {% for card in site.cards %}
     {% include cards.html card=card %}
     {% endfor %}
+
+    <div class="grid__item w-1/1 hidden-md-up">
+        <article class="card">
+                <a href="{{ site.url }}/anniversary.html">
+                    <img class="card__media" src="{{ site.url }}/files/anniversary/banner-sm.jpg" alt="banner Anniversary" title="banner Anniversary">
+                </a>
+            </article>
+    </div>
+
+    <div class="grid__item w-1/1 hidden-sm-down">
+        <article class="card">
+                <a href="{{ site.url }}/anniversary.html">
+                    <img class="card__media" src="{{ site.url }}/files/anniversary/banner.jpg" alt="banner Anniversary" title="banner Anniversary">
+                </a>
+            </article>
+    </div>
     
     <div class="grid__item alone-last lg-w-1/2 sm-w-1/1 xs-w-1/1">
         {% assign studio = site.services | where:"title", 'Le Studio ANDco' | first %}

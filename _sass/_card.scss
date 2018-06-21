@@ -191,6 +191,23 @@ $planche-heigth: 10px;
     }
 }
 
+.card__quote {
+
+    &:before {
+        content: "«";
+        font-size:30px;
+        font-weight:bold;
+        rotate:90;
+
+    }
+
+    &:after {
+        content: "»";
+        font-size:30px;
+        font-weight:bold;
+    }
+}
+
 .card--more {
     background: black;
     color: white;

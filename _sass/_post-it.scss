@@ -1,0 +1,46 @@
+.post-it {
+    position: relative;
+    margin: 20px;
+    height: 280px;
+
+    box-shadow: 0 1px 0px rgba(0,0,0,0.12), 3px 5px 5px rgba(0,0,0,0.24);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cite {
+        position: absolute;
+        bottom: 1em;
+        right: 1.5em;
+    }
+
+    blockquote {
+        text-align: center;
+    }
+}
+
+.post-it--padded {
+    padding: 20px;
+
+    a {
+        color:black;
+        text-decoration:underline;
+    }
+
+    a:hover {
+        text-decoration:line-through;
+    }
+}
+
+.post-it--yellow {
+    background: #fff740;
+}
+
+.post-it--pink {
+    background: #ff65a3;
+}
+
+.post-it--blue {
+    background: #7afcff;
+}
