@@ -62,17 +62,17 @@ $planche-heigth: 10px;
 .card--planche{
     background: none;
     box-shadow: none;
-    
+
     &:before {
         width: 100%;
         height: $planche-heigth;
         background: url('/files/planche-1-1.png') no-repeat center center;
         background-size: auto 100%;
-    
+
         left: 0;
         bottom: -$planche-heigth;
         top: auto;
-    
+
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 3px 5px 5px rgba(0,0,0,0.24);
     }
 }
@@ -139,7 +139,7 @@ $planche-heigth: 10px;
     display: block;
     font-size: 1.1em;
     font-weight: bold;
-    margin-top: 18px; 
+    margin-top: 18px;
 }
 
 .card__line {
@@ -175,7 +175,7 @@ $planche-heigth: 10px;
     .card__media {
         overflow: hidden;
         border-radius: 20px;
-    } 
+    }
 }
 
 .card--padded {

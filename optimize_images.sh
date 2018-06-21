@@ -14,7 +14,7 @@ for dir in "${DIRS[@]}"; do
 
     files=$(ls *.png 2> /dev/null | wc -l)
     if [ "$files" != "0" ]; then
-        for i in *.png; do 
+        for i in *.png; do
             OPAQUE=$(identify -format '%[opaque]' $i)
             if [ "$OPAQUE" == "true" ]; then
                 echo "Converting $i to JPG as it has no transparency"
