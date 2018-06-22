@@ -57,4 +57,22 @@ document.addEventListener("DOMContentLoaded", function() {
             link.click();
         });
     });
+
+    var videos = document.getElementsByTagName('video');
+    Array.prototype.forEach.call(videos, function(video) {
+        var button = video.parentNode.querySelector('.card__media__play');
+
+        if(button) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                video.play();
+            });
+
+            video.addEventListener('playing', function() {
+                button.setAttribute('style', 'display: none;');
+            })
+        }
+
+        video.play();
+    });
 });

@@ -50,7 +50,15 @@
     }
 
     .card__media {
+        position: relative;
         padding: 6% 26% 7.8% 6.5%;
+    }
+
+    .card__media__play {
+        position: absolute;
+        top: calc(48% - 20px);
+        left: calc(43% - 20px);
+        z-index: 99999;
     }
 
     video {
