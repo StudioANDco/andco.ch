@@ -1,12 +1,12 @@
 ---
-name: Iris
-title: Artiste résidente
+name: Square
+title: Angular Founder
 role: Graphic Designer
-sign: rhombus
-sign_long: Iris T.
+sign: square
+sign_long: Ms. Square
 email: hello@andco.ch
 phone: +41 27 527 93 57
-phone_unformatted:
+phone_unformatted: 00275279357
 slug: square
 ---
 
