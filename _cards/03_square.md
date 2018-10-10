@@ -2,8 +2,8 @@
 name: Iris
 title: Artiste résidente
 role: Graphic Designer
-sign: square
-sign_long: Iris
+sign: rhombus
+sign_long: Iris T.
 email: hello@andco.ch
 phone: +41 27 527 93 57
 phone_unformatted:
