@@ -1,11 +1,11 @@
 ---
-name: Ms. Square
-title: Angular Founder
+name: Iris
+title: Artiste résidente
 role: Graphic Designer
 sign: square
-sign_long: Ms. Square
-email: square@andco.ch
-phone:
+sign_long: Iris
+email: hello@andco.ch
+phone: +41 27 527 93 57
 phone_unformatted:
 slug: square
 ---
