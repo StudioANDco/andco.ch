@@ -1,0 +1,62 @@
+.promotion-cartes {
+    position: relative;
+
+    p { font-size: 1.3em; }
+
+    video {
+        width: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .card__invitation {
+        border: 4px solid black;
+        margin: 1em;
+        margin-top: 2em;
+        padding: 1em;
+        text-align: center;
+    }
+
+    address {
+        p {
+            font-style: normal;
+            margin: 0;
+        }
+    }
+
+    .card__invitation__one,
+    .card__invitation__two,
+    .card__invitation__three,
+    .card__invitation__four {
+        position: absolute;
+        width: 80px;
+    }
+
+    .card__invitation__one,
+    .card__invitation__two {
+        margin-top: -40px;
+    }
+
+    .card__invitation__three,
+    .card__invitation__four {
+        margin-left: -40px;
+    }
+
+        .card__invitation__one {
+        top: 50%;
+        left: 8px;
+    }
+
+    .card__invitation__two  {
+        top: 50%;
+        right: 8px;
+    }
+    .card__invitation__three {
+        left: 50%;
+        bottom: 16px;
+    }
+    .card__invitation__four  {
+        top: 30px;
+        left: 50%;
+    }
+}

@@ -65,7 +65,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if(button) {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
-                video.play();
+                try {
+                    video.play();
+                } catch(e) {}
             });
 
             video.addEventListener('playing', function() {
@@ -73,6 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
             })
         }
 
-        video.play();
+        try {
+            video.play();
+        } catch(e) {}
     });
 });
