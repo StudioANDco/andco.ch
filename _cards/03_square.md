@@ -27,7 +27,7 @@ slug: square
 
 <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
 	 <article class="card ">
-		<img class="card__media" src="{{ site.url }}/files/cards/square/07-1-fvf.jpg" alt="Mr Triangle" title="Mr Triangle">
+		<img class="card__media" src="{{ site.url }}/files/cards/square/07-1-fvf.jpg" alt="filme von frauen" title="filme von frauen">
 	</article>
 </div>
 
@@ -51,8 +51,17 @@ slug: square
 </div>
 
 <div class="grid__item lg-w-1/1 sm-w-1/1 xs-w-1/1">
+</div>
+
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
      <article class="card ">
         <img class="card__media" src="{{ site.url }}/files/cards/Square/01-1-oiseaux-migrateur-recto.jpg" alt="oiseaux" title="oiseaux">
+    </article>
+</div>
+
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/Square/01-2-version-final-recto-verso2.jpg" alt="oiseaux" title="oiseaux">
     </article>
 </div>
 
