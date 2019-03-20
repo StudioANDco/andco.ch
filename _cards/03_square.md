@@ -55,13 +55,13 @@ slug: square
 
 <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
      <article class="card ">
-        <img class="card__media" src="{{ site.url }}/files/cards/Square/01-1-oiseaux-migrateur-recto.jpg" alt="oiseaux" title="oiseaux">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/01-1-oiseaux-migrateur-recto.jpg" alt="travail de diplôme portant une attention particulière sur la Suisse. Elle étudie, analyse et compare une séléction d'une vingtaine d'espèces d'oiseaux migrateurs visibles sur notre territoire." title="oiseaux migrateurs">
     </article>
 </div>
 
 <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
      <article class="card ">
-        <img class="card__media" src="{{ site.url }}/files/cards/Square/01-2-version-final-recto-verso2.jpg" alt="oiseaux" title="oiseaux">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/01-2-version-final-recto-verso2.jpg" alt="travail de diplôme portant une attention particulière sur la Suisse. Elle étudie, analyse et compare une séléction d'une vingtaine d'espèces d'oiseaux migrateurs visibles sur notre territoire." title="oiseaux migrateurs">
     </article>
 </div>
 
