@@ -13,6 +13,49 @@ slug: square
 <div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
 </div>
 
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+    <article class="card card--padded">
+    	<h2 class="card__title">Ms. Square</h2>
+        <dl>
+        	<dt>Chez Oxyde</dt>
+        	<dd>Identité visuelle, signalétique, photographies d'architecture.</dd>
+        	<dt>École de design et Haute école d'art du Valais</dt>
+        	<dd>Travaux d'études, éditions, packaging, communication visuelle.</dd>
+        </dl>
+	</article>
+</div>
+
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+	 <article class="card ">
+		<img class="card__media" src="{{ site.url }}/files/cards/square/07-1-fvf.jpg" alt="Mr Triangle" title="Mr Triangle">
+	</article>
+</div>
+
+
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+</div>
+
+<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+</div>
+
+<div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/12-7-timeline-zoom.jpg" alt="Timeline zoom" title="Timeline zoom">
+    </article>
+</div>
+
+<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+</div>
+
+<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+</div>
+
+<div class="grid__item lg-w-1/1 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/Square/01-1-oiseaux-migrateur-recto.jpg" alt="oiseaux" title="oiseaux">
+    </article>
+</div>
+
 <!--
 <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
 	<article class="card card--padded">

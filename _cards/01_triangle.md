@@ -27,7 +27,7 @@ description: titi
         	<dt>Atelier Sonnsone</dt>
         	<dd>Indépendant chez Atelier Sonnsone, Identité visuel, packaging, éditorial, photographie.</dd>
         	<dt>Studio0909, Hangzhou, Chine</dt>
-        	<dd>Identité visuel, signalétique, packaging et contenu visuel pour le musée du Bahaus de chine.</dd>
+        	<dd>Identité visuelle, signalétique, packaging et contenu visuel pour le musée du Bahaus de chine.</dd>
         	<dt>Balung Plantation, Sabah, Malaisie</dt>
         	<dd>Subdivision du Groupe Kebun Rimau Sdn Bhd. Plantation de plus de 1200 ha sur sols volcaniques. Travaux de reportage et études de packaging.</dd>
         	<dt>Mahaux Photographie, Liège, Belgique</dt>
@@ -58,11 +58,9 @@ description: titi
     </article>
 </div>
 
-<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
 </div>
 
-<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
-</div>
 
 <div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/1">
      <article class="card ">
