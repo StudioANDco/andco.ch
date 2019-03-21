@@ -25,33 +25,30 @@ slug: square
 	</article>
 </div>
 
-<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+<div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/1">
 	 <article class="card ">
 		<img class="card__media" src="{{ site.url }}/files/cards/square/07-1-fvf.jpg" alt="filme von frauen" title="filme von frauen">
 	</article>
 </div>
 
+--
 
-<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+<div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
 </div>
 
 <div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
-</div>
-
-<div class="grid__item lg-w-3/4 sm-w-1/1 xs-w-1/1">
      <article class="card ">
-        <img class="card__media" src="{{ site.url }}/files/cards/square/12-7-timeline-zoom.jpg" alt="Timeline zoom" title="Timeline zoom">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/DSC_6500.jpg" alt="Affiche pour le théatre Zeughaus Kultur" title="Zeughaus Kultur">
     </article>
 </div>
 
 <div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/DSC_7112.jpg" alt="Affiche pour le théatre Zeughaus Kultur" title="Zeughaus Kultur">
+    </article>
 </div>
 
-<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
-</div>
-
-<div class="grid__item lg-w-1/1 sm-w-1/1 xs-w-1/1">
-</div>
+--
 
 <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
      <article class="card ">
@@ -62,6 +59,58 @@ slug: square
 <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
      <article class="card ">
         <img class="card__media" src="{{ site.url }}/files/cards/square/01-2-version-final-recto-verso2.jpg" alt="travail de diplôme portant une attention particulière sur la Suisse. Elle étudie, analyse et compare une séléction d'une vingtaine d'espèces d'oiseaux migrateurs visibles sur notre territoire." title="oiseaux migrateurs">
+    </article>
+</div>
+
+--
+<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/DSC_7359.jpg" alt="Affiche pour le théatre Zeughaus Kultur" title="Zeughaus Kultur">
+    </article>
+</div>
+
+<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/DSC_7189.jpg" alt="Affiche pour le théatre Zeughaus Kultur" title="Zeughaus Kultur">
+    </article>
+</div>
+
+--
+
+<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+</div>
+
+<div class="grid__item lg-w-2/3 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/13-2-brochure.jpg" alt="Affiche pour le théatre Zeughaus Kultur" title="Zeughaus Kultur">
+    </article>
+</div>
+
+<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/13-5-poster.jpg" alt="Affiche pour le théatre Zeughaus Kultur" title="Zeughaus Kultur">
+    </article>
+</div>
+
+<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/13-4-poster.jpg" alt="Affiche pour le théatre Zeughaus Kultur" title="Zeughaus Kultur">
+    </article>
+</div>
+
+<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/13-3-poster.jpg" alt="Affiche pour le théatre Zeughaus Kultur" title="Zeughaus Kultur">
+    </article>
+</div>
+
+--
+<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+</div>
+
+<div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
+     <article class="card ">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/05-1_affiche.jpg" alt="Projet réaliser pour mon examen final de CFC. Affiche pour l'international Academy of Classical Music." title="International Academy of Classical Music">
     </article>
 </div>
 
