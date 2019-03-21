@@ -73,6 +73,8 @@ slug: square
     </article>
 </div>
 
+<div class="grid__item lg-w-1/1 sm-w-1/1 xs-w-1/1">
+</div>
 
 <div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
 </div>
