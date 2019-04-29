@@ -31,8 +31,7 @@ slug: square
 	</article>
 </div>
 
-
-<div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
+<div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
 </div>
 
 <div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
@@ -47,6 +46,8 @@ slug: square
     </article>
 </div>
 
+<div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
+</div>
 
 <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
      <article class="card ">
@@ -69,12 +70,14 @@ slug: square
 
 <div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
      <article class="card ">
-        <img class="card__media" src="{{ site.url }}/files/cards/square/DSC_7189.jpg" alt="ASérie de photographie abstraite basé sur des loisirs" title="Projet photographique">
+        <img class="card__media" src="{{ site.url }}/files/cards/square/DSC_7189.jpg" alt="Série de photographie abstraite basé sur des loisirs" title="Projet photographique">
     </article>
 </div>
 
+<div class="grid__item lg-w-1/2 sm-w-1/2 xs-w-1/1">
+</div>
 
-<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
+<div class="grid__item lg-w-1/4 sm-w-1/2 xs-w-1/1">
 </div>
 
 <div class="grid__item lg-w-2/3 sm-w-1/1 xs-w-1/1">
@@ -82,6 +85,7 @@ slug: square
         <img class="card__media" src="{{ site.url }}/files/cards/square/13-2-brochure.jpg" alt="Affiche pour le théatre Zeughaus Kultur" title="Zeughaus Kultur">
     </article>
 </div>
+
 
 <div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
      <article class="card ">
@@ -99,9 +103,6 @@ slug: square
      <article class="card ">
         <img class="card__media" src="{{ site.url }}/files/cards/square/13-3-poster.jpg" alt="Affiche pour le théatre Zeughaus Kultur" title="Zeughaus Kultur">
     </article>
-</div>
-
-<div class="grid__item lg-w-1/4 sm-w-1/1 xs-w-1/1">
 </div>
 
 <div class="grid__item lg-w-1/2 sm-w-1/1 xs-w-1/1">
